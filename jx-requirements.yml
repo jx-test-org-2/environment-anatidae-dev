@@ -1,21 +1,26 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: anatidae
+  environmentGitOwner: jx-test-org-2
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: ps-dev-201405
   provider: gke
-  zone: ""
-gitops: true
+  zone: us-central1-a
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: anatidae.gcp.sharpwit.net
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: certs@sharpwit.net
+    enabled: true
+    production: true
 kaniko: true
 secretStorage: vault
 storage:
