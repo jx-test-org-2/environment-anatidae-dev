@@ -1,33 +1,38 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: anatidae
+  environmentGitOwner: jx-test-org-2
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: ps-dev-201405
   provider: gke
-  zone: ""
-gitops: true
+  zone: us-central1-a
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: anatidae.gcp.sharpwit.net
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: certs@sharpwit.net
+    enabled: true
+    production: true
 kaniko: true
 secretStorage: vault
 storage:
   logs:
     enabled: true
-    url: ""
+    url: gs://anatidae-logs-a1d4ff87-94d2-472d-9b1e-1908fcbb0629
   reports:
     enabled: true
-    url: ""
+    url: gs://anatidae-reports-a70d0280-1b1a-4edb-835d-4d0943b0b700
   repository:
     enabled: true
-    url: ""
+    url: gs://anatidae-repository-1c453a01-80cc-408b-8926-4aca6e6a456
 versionStream:
   ref: 0c3237feef3846fdfc7f17d4f5946017882414e2
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
