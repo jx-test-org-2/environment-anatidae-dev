@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:anatidae/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: jx-org-bot@sharpwit.net
+  token: vault:anatidae/pipelineUser:token
+  username: jx-org-bot
+prow:
+  hmacToken: vault:anatidae/prow:hmacToken

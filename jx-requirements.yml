@@ -26,13 +26,13 @@ secretStorage: vault
 storage:
   logs:
     enabled: true
-    url: ""
+    url: gs://anatidae-logs-a1d4ff87-94d2-472d-9b1e-1908fcbb0629
   reports:
     enabled: true
-    url: ""
+    url: gs://anatidae-reports-a70d0280-1b1a-4edb-835d-4d0943b0b700
   repository:
     enabled: true
-    url: ""
+    url: gs://anatidae-repository-1c453a01-80cc-408b-8926-4aca6e6a456
 versionStream:
   ref: 0c3237feef3846fdfc7f17d4f5946017882414e2
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git
